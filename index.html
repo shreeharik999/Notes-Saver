@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Notes Saver</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Notes Saver</h1>
+    <div class="small">Write • Save • Read • Import/Export</div>
+  </header>
+
+  <div class="wrap">
+    <div class="panel">
+      <div class="controls top-row">
+        <button id="newBtn">New</button>
+        <button id="saveBtn">Save</button>
+        <button id="deleteBtn">Delete</button>
+      </div>
+
+      <div style="margin-top:8px;margin-bottom:8px;">
+        <input id="searchInput" placeholder="Search notes..." />
+      </div>
+
+      <div class="notes-list" id="notesList" aria-label="Saved notes list"></div>
+
+      <div style="margin-top:10px;display:flex;gap:8px">
+        <button id="exportBtn">Export (download)</button>
+        <label>
+          <input id="importFile" type="file" accept="application/json" style="display:none" />
+          <button id="importBtn">Import</button>
+        </label>
+      </div>
+
+      <footer>
+        <div>Notes stored locally in your browser (localStorage).</div>
+        <div style="margin-top:6px">To move notes to another computer: export and import the JSON file.</div>
+      </footer>
+    </div>
+
+    <div class="panel" style="display:flex;flex-direction:column;">
+      <input id="titleInput" type="text" placeholder="Note title" />
+      <textarea id="contentInput" placeholder="Write your note here..."></textarea>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
